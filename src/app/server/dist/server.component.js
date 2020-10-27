@@ -12,8 +12,12 @@ var ServerComponent = /** @class */ (function () {
     function ServerComponent() {
         this.serverId = 10;
         this.serverStatus = 'offline';
+        this.fromMethodValue = 'This is from method';
     }
     ServerComponent.prototype.ngOnInit = function () {
+    };
+    ServerComponent.prototype.fromMethod = function () {
+        return this.fromMethodValue;
     };
     ServerComponent = __decorate([
         core_1.Component({
