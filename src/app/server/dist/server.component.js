@@ -10,11 +10,16 @@ exports.ServerComponent = void 0;
 var core_1 = require("@angular/core");
 var ServerComponent = /** @class */ (function () {
     function ServerComponent() {
+        this.serverId = 10;
+        this.serverStatus = 'offline';
     }
+    ServerComponent.prototype.ngOnInit = function () {
+    };
     ServerComponent = __decorate([
         core_1.Component({
             selector: 'app-server',
-            templateUrl: './server.component.html'
+            templateUrl: './server.component.html',
+            styleUrls: ['./server.component.css']
         })
     ], ServerComponent);
     return ServerComponent;
