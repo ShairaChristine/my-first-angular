@@ -5,8 +5,15 @@
     </div>
     <div class="panel-body">
         <p>server works!</p>
-        <p>Id: {{serverId}}</p>
-        <p>Status: {{serverStatus}}</p>
+        <p>Form ID: {{serverId}}</p>
+        <p>Status: {{isServerStatus}}</p>
         <p>From method: {{fromMethod()}}</p>
+        <br>
+        <input
+            type="text"
+            name="form-control"
+            placeholder="First Name"
+            (input)="getFirstName($event)">
+         <p>First Name : {{inputValue}}</p>
     </div>
 </div>

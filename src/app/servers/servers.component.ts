@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   allowNewServer = false;
-  newServerStatus = false
+  isButtonClick = false
 
   constructor() { 
     setTimeout(()=>{
@@ -19,7 +19,7 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createServer(){
-    return this.newServerStatus = true
+  onServerBtnClick(){
+    return this.isButtonClick = true
   }
 }

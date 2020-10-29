@@ -12,15 +12,15 @@ var ServersComponent = /** @class */ (function () {
     function ServersComponent() {
         var _this = this;
         this.allowNewServer = false;
-        this.newServerStatus = false;
+        this.isButtonClick = false;
         setTimeout(function () {
             _this.allowNewServer = true;
         }, 2000);
     }
     ServersComponent.prototype.ngOnInit = function () {
     };
-    ServersComponent.prototype.createServer = function () {
-        return this.newServerStatus = true;
+    ServersComponent.prototype.onServerBtnClick = function () {
+        return this.isButtonClick = true;
     };
     ServersComponent = __decorate([
         core_1.Component({

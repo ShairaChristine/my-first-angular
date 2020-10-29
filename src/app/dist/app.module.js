@@ -11,6 +11,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var app_component_1 = require("./app.component");
 var server_component_1 = require("./server/server.component");
+var servers_component_1 = require("./servers/servers.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -18,7 +19,8 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                server_component_1.ServerComponent
+                server_component_1.ServerComponent,
+                servers_component_1.ServersComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule

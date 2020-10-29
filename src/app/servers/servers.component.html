@@ -9,8 +9,8 @@
         <button 
             class="btn btn-primary"
             [disabled]="!allowNewServer"
-            (click)="createServer()">Add server</button>
+            (click)="onServerBtnClick()">Click Me</button>
 
-        <h4 [innerText]="newServerStatus"></h4>                
+        <h4 [innerText]="isButtonClick"></h4>                
     </div>
 </div>

@@ -11,13 +11,18 @@ var core_1 = require("@angular/core");
 var ServerComponent = /** @class */ (function () {
     function ServerComponent() {
         this.serverId = 10;
-        this.serverStatus = 'offline';
+        this.isServerStatus = 'offline';
         this.fromMethodValue = 'This is from method';
+        this.inputValue = '';
     }
     ServerComponent.prototype.ngOnInit = function () {
     };
     ServerComponent.prototype.fromMethod = function () {
         return this.fromMethodValue;
+    };
+    ServerComponent.prototype.getFirstName = function (event) {
+        console.log(event);
+        this.inputValue = event.target.value;
     };
     ServerComponent = __decorate([
         core_1.Component({

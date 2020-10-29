@@ -7,16 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
+  serverId: number = 10;
+  isServerStatus: string = 'offline';
+  fromMethodValue = 'This is from method'
+  inputValue = '';
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  serverId: number = 10;
-  serverStatus: string = 'offline';
-  fromMethodValue = 'This is from method'
 
   fromMethod(){
     return this.fromMethodValue;
+  }
+  
+  getFirstName(event: any){
+    console.log(event)
+    this.inputValue = (<HTMLInputElement>event.target).value;
   }
 }
