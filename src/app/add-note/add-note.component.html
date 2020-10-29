@@ -1,7 +1,7 @@
 
-<div class="panel panel-success">
+<div class="panel panel-success" [ngClass]="isHeaderRed ? 'panel-danger': 'panel-success'">
         <div class="panel-heading">
-            Notes
+            Notes <button class="btn" (click)="isHeaderRed = true">Click to change red</button>
         </div>
         <div class="panel-body">
             <input 

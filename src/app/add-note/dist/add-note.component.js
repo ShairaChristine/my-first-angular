@@ -12,6 +12,7 @@ var AddNoteComponent = /** @class */ (function () {
     function AddNoteComponent() {
         this.note = '';
         this.isAddNoteClick = false;
+        this.isHeaderRed = false;
         this.storedNotes = ['Don\'t forget to smile today', 'Dinner with friends @ 8pm'];
     }
     AddNoteComponent.prototype.ngOnInit = function () {

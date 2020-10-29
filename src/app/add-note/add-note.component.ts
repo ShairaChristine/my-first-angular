@@ -9,6 +9,7 @@ export class AddNoteComponent implements OnInit {
 
   note:string = ''
   isAddNoteClick = false
+  isHeaderRed = false
   storedNotes = ['Don\'t forget to smile today', 'Dinner with friends @ 8pm']
 
   constructor() { }
