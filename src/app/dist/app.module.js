@@ -9,9 +9,12 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var server_component_1 = require("./server/server.component");
 var servers_component_1 = require("./servers/servers.component");
+var add_note_component_1 = require("./add-note/add-note.component");
+var user_info_component_1 = require("./user-info/user-info.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -20,10 +23,13 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 server_component_1.ServerComponent,
-                servers_component_1.ServersComponent
+                servers_component_1.ServersComponent,
+                add_note_component_1.AddNoteComponent,
+                user_info_component_1.UserInfoComponent
             ],
             imports: [
-                platform_browser_1.BrowserModule
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

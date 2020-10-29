@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNoteComponent implements OnInit {
 
+  note:string = ''
+  isAddNoteClick = false
+  storedNotes = ['Don\'t forget to smile today', 'Dinner with friends @ 8pm']
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  addNote(event: Event){
+    this.isAddNoteClick = true
+    console.log('this.isAddNoteClick : ', this.isAddNoteClick );
+    if(!this.note){
+      this.isAddNoteClick = false
+    } else{
+      this.storedNotes.push(this.note)
+    }
+  }
+
 }
+ 

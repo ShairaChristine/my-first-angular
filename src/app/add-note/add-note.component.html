@@ -1,1 +1,31 @@
-<p>add-note works!</p>
+
+<div class="panel panel-success">
+        <div class="panel-heading">
+            Notes
+        </div>
+        <div class="panel-body">
+            <input 
+                type="text"
+                class="form-control"
+                [(ngModel)]="note">
+            <button 
+                class="btn btn-primary"
+                (click)="addNote($event)">
+                Add Note
+            </button>
+                <!-- [disabled]="!allowNewServer"
+                (click)="onServerBtnClick()"> -->
+                <!-- Click Me</button> -->
+    
+            <h4 *ngIf="isAddNoteClick; else noNote" >Note added: {{ note }}</h4>    
+            
+            <ng-template #noNote>
+                <p>Please add a note</p>
+            </ng-template>
+            <div *ngFor="let item of storedNotes">{{item}}</div>
+                <!-- . . . -->
+                <app-item-detail *ngFor="let item of storedNotes" [item]="item">
+                    
+            </app-item-detail>
+        </div>
+    </div>
