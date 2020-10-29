@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoComponent implements OnInit {
 
+  firstName = 'George'
+  lastName  = 'Joestar'
+  age = '18'
+  fullName = ''
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getFullName(){
+    this.fullName = this.firstName + ' ' + this.lastName
+    return this.fullName
+  }
 }
