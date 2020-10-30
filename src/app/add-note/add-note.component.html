@@ -1,7 +1,7 @@
 
 <div class="panel panel-success" [ngClass]="isHeaderRed ? 'panel-danger': 'panel-success'">
         <div class="panel-heading">
-            Notes <button class="btn" (click)="isHeaderRed = true">Click to change red</button>
+            Notes <button class="btn" (click)="isHeaderRed = true">Change header to red</button>
         </div>
         <div class="panel-body">
             <input 
@@ -13,9 +13,6 @@
                 (click)="addNote($event)">
                 Add Note
             </button>
-                <!-- [disabled]="!allowNewServer"
-                (click)="onServerBtnClick()"> -->
-                <!-- Click Me</button> -->
     
             <h4 *ngIf="isAddNoteClick; else noNote" >Note added: {{ note }}</h4>    
             
@@ -24,8 +21,10 @@
             </ng-template>
             <div *ngFor="let item of storedNotes">{{item}}</div>
                 <!-- . . . -->
-                <app-item-detail *ngFor="let item of storedNotes" [item]="item">
+                <!-- <app-item-detail *ngFor="let item of storedNotes" [item]="item">
                     
-            </app-item-detail>
+            </app-item-detail> -->
+
+            <app-each-note [perNote]='note'></app-each-note>
         </div>
     </div>

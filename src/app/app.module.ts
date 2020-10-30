@@ -7,6 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { EachNoteComponent } from './each-note/each-note.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UserInfoComponent } from './user-info/user-info.component';
     ServerComponent,
     ServersComponent,
     AddNoteComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    EachNoteComponent
   ],
   imports: [
     BrowserModule,
