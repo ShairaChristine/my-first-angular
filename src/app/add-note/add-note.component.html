@@ -19,12 +19,12 @@
             <ng-template #noNote>
                 <p>Please add a note</p>
             </ng-template>
-            <div *ngFor="let item of storedNotes">{{item}}</div>
+            <!-- <div>{{item}}</div> -->
                 <!-- . . . -->
                 <!-- <app-item-detail *ngFor="let item of storedNotes" [item]="item">
                     
             </app-item-detail> -->
 
-            <app-each-note [perNote]='note'></app-each-note>
+            <app-each-note *ngFor="let item of storedNotes" [perNote]='item'></app-each-note>
         </div>
     </div>
